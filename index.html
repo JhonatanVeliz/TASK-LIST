@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="shortcut icon" href="./icons/icon.jpg" type="image/x-icon">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/app.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Quicksand:wght@300&display=swap"
+        rel="stylesheet">
+
+    <!-- Js -->
+    <script defer src="./js/mode.js"></script>
+    <script defer src="./js/createTask.js"></script>
+    <script defer src="./js/preventDefault.js"></script>
+    
+</head>
+
+<body>
+
+    <nav class="mode">
+        <button type="button" class="btn mode__btn" id="mode"><img src="./icons/sol.png" alt="mode" id="iconMode"></button>
+    </nav>
+
+    <main class="main">
+
+        <div class="container">
+
+            <h1 class="title" id="title">Tus Tareas</h1>
+
+            <form id="form" class="input">
+
+                <input type="text" class="input__text" id="task" placeholder="Realizar..." autocomplete="off">
+
+                <button type="submit" class="btn btn--add" id="add">
+                    <img src="./icons/plus.png" class="icon" alt="agregar tarea">
+                </button>
+
+            </form>
+
+            <aside class="aside" id="vacio">
+
+                <div class="aside__text" id="textVacio">
+
+                    <p class="text">No hay tareas pendientes</p>
+                    <img src="./icons/done.png" class="aside__icon" alt="ninguna tarea encontrada">
+
+                </div>
+
+            </aside>
+
+            <div class="task__container display-none" id="task-container">
+            </div>
+
+            <aside class="buttons-all display-none" id="buttons-all">
+                <button class="btn btn--all btn--blue" onclick="completedAllTask()">Completar</button>
+                <button class="btn btn--all btn--fuchsia" onclick="removeAllTask()">Eliminar</button>
+            </aside>
+        </div>
+
+    </main>
+
+    <aside class="invalid">
+
+        <div class="invalid__container">
+            <p class="invalid__text">Tarea Invalida</p>
+
+            <button type="button" class="btn invalid__btn" onclick="taskInvalidRemove()">
+                <img src="./icons/cancel.png" alt="salir">
+            </button>
+
+        </div>
+
+    </aside>
+
+</body>
+
+</html>
