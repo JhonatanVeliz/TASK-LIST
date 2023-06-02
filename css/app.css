@@ -139,9 +139,7 @@ body {
   padding: 2rem;
   margin-top: 3rem;
   border-radius: 1.5rem;
-  z-index: 10;
-  display: flex;
-  flex-direction: column-reverse;
+  display: grid;
   grid-gap: 1.5rem;
   transition: 0.3s linear;
 }
@@ -157,6 +155,12 @@ body {
   background-color: #cecece;
   border-radius: 0.5rem;
   padding: 1rem;
+  transition: 0.3s linear;
+  box-shadow: 0px 0px 5px transparent;
+}
+
+.task__list:hover {
+  box-shadow: 0px 0px 5px #9d9d9d;
 }
 
 .task__title {
@@ -270,9 +274,9 @@ body {
     margin: 0;
   }
   .buttons-all {
-    flex-direction: column;
-    align-items: center;
-    grid-gap: 1.3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
   }
   .btn--all {
     width: 100%;
