@@ -271,7 +271,7 @@ body {
   }
   .task__buttons {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
     grid-gap: 1.5rem;
   }
   .task__btn {
