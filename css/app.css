@@ -39,7 +39,7 @@ body {
   padding-top: 6rem;
 }
 
-.title-clear {
+.title-light {
   color: #d9d9d9;
 }
 
@@ -73,7 +73,7 @@ body {
   font-weight: 300;
 }
 
-.aside__text--clear {
+.aside__text--light {
   color: #d9d9d9;
 }
 
@@ -144,7 +144,7 @@ body {
   transition: 0.3s linear;
 }
 
-.task__container--clear {
+.task__container--light {
   background-color: #D6D6D6;
 }
 
@@ -222,7 +222,7 @@ body {
 }
 
 .btn--blue {
-  background-color: #085DAB;
+  background-color: #084cab;
 }
 
 .btn--fuchsia {
@@ -231,6 +231,10 @@ body {
 
 .bg-blue {
   background-color: #085DAB;
+}
+
+.btn-purple {
+  background-color: rgb(128, 45, 128);
 }
 
 .item-opacity {
@@ -353,6 +357,45 @@ body {
     margin-top: 1rem;
     margin-right: 1rem;
   }
+}
+.update {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: -150%;
+  background-color: #070D1D;
+  display: grid;
+  place-items: center;
+  transition: 0.3s linear;
+}
+.update__container {
+  width: 90%;
+  max-width: 40rem;
+}
+.update__title {
+  color: #d9d9d9;
+}
+.update__input {
+  width: 100%;
+  padding: 1rem;
+  font-family: "Poppins", arial;
+  border: none;
+  border-radius: 0.5rem;
+}
+.update__btn {
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+}
+.update__btn--blue {
+  background-color: #084cab;
+}
+.update__btn--red {
+  background-color: #C22831;
+}
+
+.modal--active {
+  right: 0;
 }
 
 /*# sourceMappingURL=app.css.map */

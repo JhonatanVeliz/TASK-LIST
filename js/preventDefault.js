@@ -1,7 +1,7 @@
 (
     ()=>{
 
-        // valor del formulario
+        // formulario
         const form = document.querySelector('#form');
         
         // Previniendo el comportamiento del navegador

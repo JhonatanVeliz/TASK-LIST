@@ -63,15 +63,26 @@
             <div class="task__container display-none" id="task-container">
             </div>
 
-            <aside class="buttons-all display-none" id="buttons-all">
+            <section class="buttons-all display-none" id="buttons-all">
                 <button class="btn btn--all btn--blue" onclick="completedAllTask()">Completar</button>
                 <button class="btn btn--all btn--fuchsia" onclick="removeAllTask()">Eliminar</button>
-            </aside>
+            </section>
         </div>
 
     </main>
 
-    <aside class="invalid">
+    <article class="modal update">
+
+        <div class="update__container">
+            <h3 class="title update__title">Edita tu tarea:</h3>
+            <input type="text" class="update__input" id="updateTask">
+            <button class="btn update__btn update__btn--blue" id="btn-update">Actualizar</button>
+            <button class="btn update__btn update__btn--red" id="btn-update-cancel">Cancelar</button>
+        </div>
+
+    </article>
+
+    <section class="invalid">
 
         <div class="invalid__container">
             <p class="invalid__text">Tarea Invalida</p>
@@ -82,7 +93,7 @@
 
         </div>
 
-    </aside>
+    </section>
 
 </body>
 
