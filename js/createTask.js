@@ -36,13 +36,13 @@ function checkTasks() {
     }
 }
 function completeTask(id) {
-    const task = document.querySelector(`[data-task="${id}"]`);
-    task.querySelector('.task__info').classList.toggle('item-opacity');
-    const btnCheck = task.querySelector('.check').classList;
-    btnCheck.remove('btn--green');
-    btnCheck.add('btn--blue');
-
-    completedTaskStorage(id);
+        const task = document.querySelector(`[data-task="${id}"]`);
+        task.querySelector('.task__info').classList.toggle('item-opacity');
+        const btnCheck = task.querySelector('.check').classList;
+        btnCheck.remove('btn--green');
+        btnCheck.add('btn--blue');
+    
+        completedTaskStorage(id);
 }
 
 function removeTask(id) {
@@ -115,7 +115,6 @@ function updateTask(id) {
         taskStorage.title = updateText;
         localStorage.setItem(id, JSON.stringify(taskStorage));
 
-        console.log('Hola');
         modalToggler(taskUpdateContent, false);
 
         // Remover el controlador de eventos después de ejecutarse una vez
@@ -147,9 +146,7 @@ function addTaskStorage(id, title, date, completed) {
 };
 
 function removeTaskStorage(id) {
-
     localStorage.removeItem(id);
-
 }
 
 function completedTaskStorage(id) {
@@ -178,7 +175,8 @@ function completedAllTask() {
     const tasks = { ...localStorage };
 
     Object.keys(tasks).forEach(task => {
-        completeTask(task);
+        try { completeTask(task)}
+        catch (error) {}
     });
 }
 
@@ -187,6 +185,7 @@ function removeAllTask() {
     const tasks = { ...localStorage };
 
     Object.keys(tasks).forEach(task => {
-        removeTask(task);
+        try {removeTask(task)}
+        catch (error) {}
     });
 }

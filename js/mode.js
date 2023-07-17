@@ -1,6 +1,5 @@
 (
     ()=>{
-
         //  Objeto que contiene los valores de las class para asignarlas al body
         const VALUES = {
             body_dark : 'body-black',
@@ -12,7 +11,6 @@
                 icon_sol  : './icons/sol.png'
             }
         };
-
         // valor del boton, el body y los elementos para realizarles casting de background 
         const body    = document.querySelector('body'),
               btnMode = body.querySelector('#mode'),
@@ -52,13 +50,9 @@
 
         function checkMode() {
             const mode = localStorage.getItem('mode');
-            if(mode){
-                return updateModeDark(true);
-            }
+            if(mode){ isActive = false; return updateModeDark(true)}
             updateModeDark(false);
         }
-
         checkMode();
-
     }
 )();
