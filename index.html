@@ -1,100 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tareas</title>
-    <link rel="shortcut icon" href="./icons/icon.jpg" type="image/x-icon">
+    <title>App de tareas</title>
 
-    <!-- Css -->
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="preconnect" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/app.css">
-    <link rel="preconnect" href="./css/app.css">
-
-    <!-- Fonts -->
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Quicksand:wght@300&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap" rel="stylesheet">
 
-    <!-- Js -->
-    <script defer src="./js/mode.js"></script>
-    <script defer src="./js/createTask.js"></script>
-    <script defer src="./js/preventDefault.js"></script>
-    
 </head>
-
 <body>
+    
+    <div class="container">
 
-    <nav class="mode">
-        <button type="button" class="btn mode__btn" id="mode"><img src="./icons/sol.png" alt="mode" id="iconMode"></button>
-    </nav>
+        <main class="task">
 
-    <main class="main">
+            <button class="btn btn--mode" id="mode"><img src="./assets/sol.png" alt="claro" id="img-mode"></button>
 
-        <div class="container">
+            <h1 class="title task__title texto">Tus Tareas</h1>
 
-            <h1 class="title" id="title">Tus Tareas</h1>
-
-            <form id="form" class="input">
-
-                <input type="text" class="input__text" id="task" placeholder="Realizar..." autocomplete="off">
-
-                <button type="submit" class="btn btn--add" id="add">
-                    <img src="./icons/plus.png" class="icon" alt="agregar tarea">
-                </button>
-
-            </form>
-
-            <aside class="aside" id="vacio">
-
-                <div class="aside__text" id="textVacio">
-
-                    <p class="text">No hay tareas pendientes</p>
-                    <img src="./icons/done.png" class="aside__icon" alt="ninguna tarea encontrada">
-
-                </div>
-
-            </aside>
-
-            <div class="task__container display-none" id="task-container">
+            <div class="task__message">
+                <input type="text" class="task__message__input" id="task" placeholder="Escribe tu tarea:">
+                <button class="task__message__btn" id="create">+</button>
             </div>
 
-            <section class="buttons-all display-none" id="buttons-all">
-                <button class="btn btn--all btn--blue" onclick="completedAllTask()">Completar</button>
-                <button class="btn btn--all btn--fuchsia" onclick="removeAllTask()">Eliminar</button>
-            </section>
-        </div>
+            <div class="task__body">
 
-    </main>
+                <div class="task__done">
+                    <img class="task__done__img" src="./assets/done.png" alt="ninguna tarea agregada">
+                    <h2 class="task__done__title title texto">Ninguna tarea encontrada</h2>
+                </div>
 
-    <article class="modal update">
+                <div class="task__list display-none" id="root-task">
 
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <div class="update">
         <div class="update__container">
-            <h3 class="title update__title">Edita tu tarea:</h3>
-            <input type="text" class="update__input" id="updateTask">
-            <button class="btn update__btn update__btn--blue" id="btn-update">Actualizar</button>
-            <button class="btn update__btn update__btn--red" id="btn-update-cancel">Cancelar</button>
+            <h3 class="update__title">Escribe la nueva tarea</h3>
+            <input type="text" id="newTask" class="update__input">
+
+            <div class="btns update__btns">
+                <button class="btn btn--accept">Aceptar</button>
+                <button class="btn btn--cancel">Cancelar</button>
+            </div>
         </div>
-
-    </article>
-
-    <section class="invalid">
-
+    </div>
+    
+    <aside class="invalid">
         <div class="invalid__container">
-            <p class="invalid__text">Tarea Invalida</p>
-
-            <button type="button" class="btn invalid__btn" onclick="taskInvalidRemove()">
-                <img src="./icons/cancel.png" alt="salir">
-            </button>
-
+            <h3 class="invalid__title">Tarea Invalida</h3>
+            <button class="btn btn--invalid">Aceptar</button>
         </div>
+    </aside>
 
-    </section>
-
+    <script type="module" src="./js/dark-mode.js"></script>
+    <script src="./js/createdTask.js"></script>
 </body>
-
 </html>

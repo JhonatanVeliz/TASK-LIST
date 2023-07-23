@@ -1,0 +1,1 @@
+export const $ = (nodo, array, documento = document.body) => array ? documento.querySelectorAll(nodo) : documento.querySelector(nodo);

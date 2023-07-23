@@ -1,0 +1,114 @@
+@use 'variables' as v;
+
+.title{
+    color: v.$color-black;
+    font-family: v.$font;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 3rem;
+    font-size: 4.5rem;
+}
+
+.task{
+    position: relative;
+    &__message{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 80%;
+        margin: 0 auto;
+        height: 6.7rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        transition: .4s linear;
+        box-shadow: 0px 0px .5rem #00000022;
+        &:hover{
+            box-shadow: 0px 0px 1rem v.$color-gray-light;
+        }
+        &__input{
+            flex-grow: 1;
+            padding: 2rem 1rem;
+            font-size: 1.8rem;
+            border: none;
+            outline: none;
+            font-family: v.$font;
+            color: v.$color-gray-light;
+            background-color: v.$color-white-dark;
+            transition: .2s linear;
+        }
+        &__btn{
+            background-color: v.$color-orange;
+            color: v.$color-white;
+            font-size: 2.9rem;
+            font-family: v.$font;
+            font-weight: 500;
+            width: 6rem;
+            padding: 1.8rem;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    &__done{
+        padding-top: 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        &__img{
+            max-width: 10rem;
+            background-color: v.$color-green;
+            border-radius: 50%;
+        }
+        &__title{
+            font-weight: 200;
+        }
+    }
+}
+.task__list{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1.5rem;
+    background-color: v.$color-gray-dark;
+    max-width: 80%;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    transition: .3s linear;
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem;
+        background-color: v.$color-white;
+        border-radius: .5rem;
+        font-size: 1.8rem;
+        font-family: v.$font;
+        color: v.$color-gray-light;
+        margin: .5rem 0;
+        &__title{
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+        &__btns{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-left: 1.5rem;
+            grid-gap: .6rem;
+        }
+        &__btn{
+            padding: 1rem;
+            max-width: 4.5rem;
+            height: 4.5rem;
+        }
+    }
+}
+.display-none{
+    display: none;
+    opacity: 0;
+    z-index: -1;
+    padding: 0;
+}
+.text--white{
+    color: v.$color-white;
+}
