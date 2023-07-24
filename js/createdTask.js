@@ -46,7 +46,7 @@ class NewTask {
         const setHTML = `   
         <div class="task__list__item" id="${id}">
     
-            <p class="task__list__item__title ${completed ? "throug" : ""}" data-throug="${id}"><span data-title="${id}">${task}</span><span class="task__list__title__fecha">${date}</span></p>
+            <p class="task__list__item__title ${completed ? "throug" : ""}" data-throug="${id}"><span data-title="${id}">${task}</span><span class="task__list__item__title__fecha">${date}</span></p>
     
             <div class="task__list__item__btns">
                 <button class="btn task__list__item__btn btn--completed ${completed ? "btn--blue" : "btn--green"}" onclick="NewTask.completedTask(${id})" data-completed="${id}"><img src="./assets/done.png" alt="completar tarea"></button>
